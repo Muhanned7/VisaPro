@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Order</h1>
+    
+    
+    <p>Enter The order  amount</p>
+    <form asp-action="Index" method="post">
+        <div>
+        @model VisaPro.Models.CustomerType
+        <input type="text" asp-for="Amount" />
+            <select asp-for="SelectedOption"  asp-items="Model.Options">
+                <option value="">Select Option</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
