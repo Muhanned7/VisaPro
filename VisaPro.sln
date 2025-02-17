@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35806.99 d17.13
+VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisaPro", "VisaPro\VisaPro.csproj", "{9713E307-DCE8-4FE1-937F-F03CA61869FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisaPro.Test", "VisaPro.Test\VisaPro.Test.csproj", "{97A39B45-EB34-68E2-F060-23B5C6CEC509}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9713E307-DCE8-4FE1-937F-F03CA61869FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9713E307-DCE8-4FE1-937F-F03CA61869FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9713E307-DCE8-4FE1-937F-F03CA61869FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A39B45-EB34-68E2-F060-23B5C6CEC509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A39B45-EB34-68E2-F060-23B5C6CEC509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A39B45-EB34-68E2-F060-23B5C6CEC509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A39B45-EB34-68E2-F060-23B5C6CEC509}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
