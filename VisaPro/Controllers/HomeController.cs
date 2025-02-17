@@ -26,7 +26,7 @@ public class HomeController : Controller
             var customerTypeWithDiscount = new CustomerTypeWithDiscount
             {
                 CustomerType = model,
-                Discount =  model.Amount> 100 ? model.Amount * 0.10 : model.Amount
+                Discount =  model.Amount> 100 && model.SelectedOption=="Loyal" ? model.Amount * 0.10 : 0
             };
             TempData["CustomerTypewithDiscount"] = JsonConvert.SerializeObject(customerTypeWithDiscount);
             
