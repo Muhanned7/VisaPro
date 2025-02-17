@@ -5,10 +5,11 @@ namespace VisaPro.Models
 {
     public class CustomerType
     {
-        [Required]
+        [Required (ErrorMessage ="Amount is required")]
+        [Range(1, int.MaxValue, ErrorMessage = "Amount must be greater than 0")]
         public int Amount { get; set; }
 
-        [Required]
+        [Required (ErrorMessage ="Please Select an option")]
         public string SelectedOption { get; set; }
         public List<SelectListItem> Options { get; set; } = new List<SelectListItem>
         {

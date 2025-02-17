@@ -2,12 +2,15 @@
 
 @{
     ViewData["Title"] = "Results Page";
+    var totalAfterDiscount = Model.CustomerType.Amount - Model.Discount;
 }
+
 <div class="text-center">
 <h1>Results</h1>
 
     <p>Amount: @Model.CustomerType.Amount</p>
 <p>Selected Option: @Model.CustomerType.SelectedOption</p>
     <p>Discount: @Model.Discount</p>
+    <p>Total After Discount: @totalAfterDiscount</p>
 
 </div>

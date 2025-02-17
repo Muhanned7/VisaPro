@@ -1,20 +1,48 @@
-﻿@{
+﻿@model VisaPro.Models.CustomerType
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Order</h1>
-    
-    
-    <p>Enter The order  amount</p>
+
+    <h4>Enter The order amount</h4>
+
+    <!-- Validation summary at the top -->
+    <div asp-validation-summary="All" class="text-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(ms => ms.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+
     <form asp-action="Index" method="post">
-        <div>
-        @model VisaPro.Models.CustomerType
-        <input type="text" asp-for="Amount" />
-            <select asp-for="SelectedOption"  asp-items="Model.Options">
-                <option value="">Select Option</option>
-            </select>
+        <div class="row mb-3 justify-content-center">
+            <div class="col-auto">
+                <div class="input-group">
+                    <span class="input-group-text">$</span><input type="text" asp-for="Amount" class="form-control" style="height: calc(1.5em + .75rem + 2px);" />
+                    
+                </div>
+                <span asp-validation-for="Amount" class="alert text-danger"></span>
+            </div>
+            <div class="col-auto">
+                <select asp-for="SelectedOption" style="height: calc(1.5em + .75rem + 2px);" asp-items="Model.Options">
+                    <option value="" >Select Option</option>
+                </select><div>
+                <span asp-validation-for="SelectedOption" class="alert text-danger"></span>
+                </div>
+            </div>
         </div>
-        <button type="submit">Submit</button>
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </form>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
